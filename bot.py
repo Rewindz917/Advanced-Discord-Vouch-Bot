@@ -124,11 +124,8 @@ async def on_ready():
 if __name__ == "__main__":
     run_dashboard()
 
-import os
-
-import os
-
-TOKEN = os.getenv("DISCORD_BOT_TOKEN")  # Get token from Render
+# ✅ Load Discord Token Securely from Environment Variables
+TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 
 if not TOKEN:
     raise ValueError("⚠️ DISCORD_BOT_TOKEN is missing. Set it in Render environment variables.")
