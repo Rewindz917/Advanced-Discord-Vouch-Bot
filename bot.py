@@ -127,7 +127,13 @@ if __name__ == "__main__":
 import os
 
 import os
-bot.run(os.getenv("DISCORD_BOT_TOKEN"))
+
+TOKEN = os.getenv("DISCORD_BOT_TOKEN")  # Get token from Render
+
+if not TOKEN:
+    raise ValueError("⚠️ DISCORD_BOT_TOKEN is missing. Set it in Render environment variables.")
+
+bot.run(TOKEN)
 
 
 
